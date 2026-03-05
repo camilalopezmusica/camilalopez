@@ -102,7 +102,6 @@
 
         .hero-bio {
             font-size: 1.4rem;
-            ;
             line-height: 1.9;
             opacity: .75;
             margin-bottom: 2.5rem;
@@ -208,10 +207,6 @@
             align-items: start
         }
 
-        .disco-cover {
-            position: relative
-        }
-
         .disco-cover img {
             width: 100%;
             display: block;
@@ -231,7 +226,7 @@
             align-items: center;
             gap: 1.4rem;
             margin-bottom: 2rem;
-            padding: 1.4rem 1.4rem;
+            padding: 1.4rem;
             background: rgba(255, 255, 255, .04);
             border: 1px solid rgba(255, 255, 255, .1)
         }
@@ -391,6 +386,139 @@
             object-fit: cover;
         }
 
+        /* ===================== CLASES ===================== */
+        .clases-section {
+            padding: 5rem 3rem;
+            border-top: 1px solid rgba(255, 255, 255, .08)
+        }
+
+        .clases-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+        }
+
+        .clase-card {
+            border: 1px solid rgba(255, 255, 255, .1);
+            padding: 3rem;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            gap: 1.8rem;
+            background: rgba(255, 255, 255, .02);
+            transition: border-color .3s, background .3s;
+        }
+
+        .clase-card:hover {
+            border-color: rgba(255, 255, 255, .25);
+            background: rgba(255, 255, 255, .04);
+        }
+
+        .clase-numero {
+            font-family: 'Playfair Display', serif;
+            font-size: 4rem;
+            line-height: 1;
+            opacity: .08;
+            position: absolute;
+            top: 2rem;
+            right: 2.5rem;
+            font-style: italic;
+        }
+
+        .clase-tag {
+            font-size: 0.75rem;
+            letter-spacing: .4em;
+            text-transform: uppercase;
+            opacity: .5;
+            display: block;
+        }
+
+        .clase-titulo {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(1.4rem, 2.5vw, 1.9rem);
+            line-height: 1.2;
+            font-weight: 400;
+        }
+
+        .clase-divider {
+            width: 2.5rem;
+            height: 1px;
+            background: var(--red);
+            display: block;
+        }
+
+        .clase-desc {
+            font-size: 1.05rem;
+            line-height: 1.9;
+            opacity: .72;
+        }
+
+        .clase-desc strong {
+            color: var(--white);
+            font-weight: 500;
+            opacity: 1;
+        }
+
+        .clase-footer {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-top: auto;
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(255, 255, 255, .07);
+        }
+
+        .clase-footer-label {
+            font-size: 0.72rem;
+            letter-spacing: .3em;
+            text-transform: uppercase;
+            opacity: .4;
+        }
+
+        .clase-footer-val {
+            font-size: 0.85rem;
+            opacity: .7;
+        }
+
+        /* ===================== ESTUDIO ===================== */
+        .estudio-section {
+            padding: 0 3rem 4rem;
+        }
+
+        .estudio-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            gap: 1rem;
+        }
+
+        .estudio-foto {
+            overflow: hidden;
+            background: rgba(255, 255, 255, .04);
+        }
+
+        .estudio-foto img,
+        .estudio-foto-vert img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            transition: transform .5s ease;
+        }
+
+        .estudio-foto:hover img,
+        .estudio-foto-vert:hover img {
+            transform: scale(1.03);
+        }
+
+        .estudio-foto-vert {
+            grid-column: 3;
+            grid-row: 1 / 3;
+            overflow: hidden;
+            background: rgba(255, 255, 255, .04);
+        }
+
+        /* ===================== CONTACTO ===================== */
         .contacto {
             padding: 6rem 3rem;
             text-align: center;
@@ -440,7 +568,7 @@
             color: var(--white);
             text-decoration: none;
             border-bottom: 1px solid rgba(255, 255, 255, .2);
-            padding-bottom: .1.4rem
+            padding-bottom: .1rem
         }
 
         .contact-val a:hover {
@@ -459,10 +587,79 @@
             opacity: .3
         }
 
+        /* ===================== GIRA ===================== */
+        .gira-block {
+            margin-top: 2.5rem;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, .06);
+        }
+
+        .gira-titulo {
+            font-size: 1rem;
+            font-weight: 500;
+            letter-spacing: .05em;
+            margin-bottom: .6rem;
+        }
+
+        .gira-desc {
+            font-size: 0.9rem;
+            line-height: 1.8;
+            opacity: .6;
+            max-width: 70ch;
+        }
+
+        /* ===================== VIDEOS ===================== */
+        .videos-section {
+            padding: 5rem 3rem;
+            border-top: 1px solid rgba(255, 255, 255, .08)
+        }
+
+        .videos-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+        }
+
+        .video-wrap {
+            position: relative;
+            width: 100%;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+        }
+
+        .video-wrap iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+
+        .video-item-label {
+            font-size: 0.72rem;
+            letter-spacing: .25em;
+            text-transform: uppercase;
+            opacity: .45;
+            display: block;
+            margin-top: .75rem;
+        }
+
+        @media(max-width:768px) {
+            .videos-section {
+                padding: 2.5rem 1.2rem
+            }
+
+            .videos-grid {
+                grid-template-columns: 1fr;
+                gap: 1.2rem
+            }
+        }
+
         /* ===================== MOBILE ===================== */
         @media(max-width:768px) {
 
-            /* Nav */
             nav {
                 padding: 1rem 1.2rem
             }
@@ -481,7 +678,6 @@
                 letter-spacing: .1em
             }
 
-            /* Hero */
             .hero {
                 grid-template-columns: 1fr;
                 padding: 5rem 1.2rem 2.5rem;
@@ -516,13 +712,11 @@
                 letter-spacing: .12em
             }
 
-            /* Marquee */
             .marquee span {
                 font-size: 0.75rem;
                 letter-spacing: .18em
             }
 
-            /* Section headers */
             .section-header {
                 padding: 0.9rem 1.2rem
             }
@@ -534,7 +728,6 @@
                 border-width: 1.5px
             }
 
-            /* Disco */
             .disco {
                 grid-template-columns: 1fr;
                 padding: 2.5rem 1.2rem;
@@ -567,7 +760,6 @@
                 line-height: 1.8
             }
 
-            /* Bio */
             .bio-section {
                 padding: 2.5rem 1.2rem
             }
@@ -587,7 +779,6 @@
                 line-height: 1.8
             }
 
-            /* Timeline */
             .timeline-section {
                 padding: 0 1.2rem 2.5rem
             }
@@ -613,7 +804,6 @@
                 line-height: 1.7
             }
 
-            /* Venues */
             .venues-section {
                 padding: 2rem 1.2rem
             }
@@ -630,7 +820,6 @@
                 letter-spacing: .07em
             }
 
-            /* Fotos */
             .fotos-section {
                 padding: 2rem 1.2rem
             }
@@ -641,7 +830,56 @@
                 margin-top: 1.2rem
             }
 
-            /* Contacto */
+            .clases-section {
+                padding: 2.5rem 1.2rem
+            }
+
+            .clases-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem
+            }
+
+            .clase-card {
+                padding: 2rem 1.5rem
+            }
+
+            .clase-numero {
+                font-size: 3rem;
+                top: 1.5rem;
+                right: 1.5rem
+            }
+
+            .clase-titulo {
+                font-size: 1.3rem
+            }
+
+            .clase-desc {
+                font-size: 0.88rem
+            }
+
+            .estudio-section {
+                padding: 0 1.2rem 2.5rem
+            }
+
+            .estudio-grid {
+                grid-template-columns: 1fr 1fr;
+                grid-template-rows: auto
+            }
+
+            .estudio-foto-vert {
+                grid-column: 1 / 3;
+                grid-row: auto;
+                aspect-ratio: 16/9
+            }
+
+            .estudio-foto-vert img {
+                object-position: center bottom;
+            }
+
+            .estudio-foto {
+                aspect-ratio: 16/9
+            }
+
             .contacto {
                 padding: 3.5rem 1.2rem
             }
@@ -677,7 +915,6 @@
                 font-size: 0.85rem
             }
 
-            /* Footer */
             footer {
                 flex-direction: column;
                 gap: .4rem;
@@ -697,6 +934,8 @@
             <li><a href="#disco">Disco</a></li>
             <li><a href="#bio">Bio</a></li>
             <li><a href="#fotos">Fotos</a></li>
+            <li><a href="#videos">Videos</a></li>
+            <li><a href="#clases">Clases</a></li>
             <li><a href="#contacto">Contacto</a></li>
         </ul>
     </nav>
@@ -804,16 +1043,6 @@
                 </div>
             </div>
             <div class="tl-item">
-                <span class="tl-year">2015</span>
-                <div class="tl-content">
-                    <div class="tl-title">Gira nacional "Se trata de nosotras"</div>
-                    <div class="tl-desc">A raíz de su tema "Basta", fue convocada como solista por el Ministerio de
-                        Cultura a participar de una gira nacional por el interior del país, bajo la producción de Lito
-                        Vitale. Compartió escenario con Liliana Herrero, Miss Bolivia, Sofía Viola, Luciana Jury, entre
-                        otras.</div>
-                </div>
-            </div>
-            <div class="tl-item">
                 <span class="tl-year">2018</span>
                 <div class="tl-content">
                     <div class="tl-title">Naked and borrowed</div>
@@ -859,6 +1088,14 @@
             <div class="venue">CCJJ</div>
             <div class="venue">Centro Cultural Haroldo Conti</div>
         </div>
+
+        <div class="gira-block">
+            <div class="gira-titulo">Gira nacional "Se trata de nosotras" · 2015</div>
+            <div class="gira-desc">A raíz de su tema "Basta", fue convocada como solista por el Ministerio de
+                Cultura a participar de una gira nacional por el interior del país, bajo la producción de Lito
+                Vitale. Compartió escenario con Liliana Herrero, Miss Bolivia, Sofía Viola, Luciana Jury, entre
+                otras.</div>
+        </div>
     </section>
 
     <!-- FOTOS -->
@@ -883,13 +1120,144 @@
         </div>
     </section>
 
+    <!-- VIDEOS -->
+    <div class="section-header" id="videos">
+        <h2>Videos</h2>
+    </div>
+
+    <section class="videos-section">
+        <div class="videos-grid">
+            <div>
+                <div class="video-wrap">
+                    <iframe src="https://www.youtube.com/embed/fhMfJWkQa04" title="La Peona" allowfullscreen
+                        loading="lazy"></iframe>
+                </div>
+                <span class="video-item-label">La Peona</span>
+            </div>
+            <div>
+                <div class="video-wrap">
+                    <iframe src="https://www.youtube.com/embed/CZL1KEHMF7A" title="Armagedón" allowfullscreen
+                        loading="lazy"></iframe>
+                </div>
+                <span class="video-item-label">Armagedón</span>
+            </div>
+            <div>
+                <div class="video-wrap">
+                    <iframe src="https://www.youtube.com/embed/V0VYAgqvqjc" title="Llegará el día" allowfullscreen
+                        loading="lazy"></iframe>
+                </div>
+                <span class="video-item-label">Llegará el día</span>
+            </div>
+            <div>
+                <div class="video-wrap">
+                    <iframe src="https://www.youtube.com/embed/D6mmtBH4-uA" title="El andamiaje" allowfullscreen
+                        loading="lazy"></iframe>
+                </div>
+                <span class="video-item-label">El andamiaje</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- CLASES -->
+    <div class="section-header" id="clases">
+        <h2>Clases</h2>
+    </div>
+
+    <section class="clases-section">
+        <div class="clases-grid">
+
+            <div class="clase-card">
+                <span class="clase-numero">I</span>
+                <span class="clase-tag">Clases particulares</span>
+                <h3 class="clase-titulo">Guitarra &amp; Lenguaje Musical</h3>
+                <span class="clase-divider"></span>
+                <p class="clase-desc">
+                    Clases orientadas a la canción popular, manifiesta en géneros como el <strong>folk, el rock, el pop
+                        y el folclore</strong>. Propongo un aprendizaje que articula técnica en el instrumento y
+                    lenguaje
+                    como instancia necesaria para comprender la dimensión sobre la que desarrollamos nuestro quehacer
+                    musical.
+                </p>
+                <p class="clase-desc">
+                    Ideal para quienes quieran desarrollar técnicas de acompañamiento que sofistiquen las posibilidades
+                    de variaciones, estructuras formales, diseños de texturas y contrastes. Trabajaremos sobre los
+                    pilares de <strong>Ritmo, Melodía y Armonía</strong> como elementos medulares.
+                </p>
+                <p class="clase-desc">
+                    Abordaremos lectura de cifrados complejos, lectura en pentagrama y organización formal de canciones.
+                    Apto para quienes se inicien sin experiencia o quienes deseen explorar la guitarra desde una
+                    dimensión integral.
+                </p>
+                <div class="clase-footer">
+                    <span class="clase-footer-label">Consultas →</span>
+                    <span class="clase-footer-val"><a href="mailto:camilalopez85@gmail.com"
+                            style="color:var(--white);text-decoration:none;border-bottom:1px solid rgba(255,255,255,.2)">camilalopez85@gmail.com</a></span>
+                </div>
+            </div>
+
+            <div class="clase-card">
+                <span class="clase-numero">II</span>
+                <span class="clase-tag">Espacio individual</span>
+                <h3 class="clase-titulo">Clínica de Canciones</h3>
+                <span class="clase-divider"></span>
+                <p class="clase-desc">
+                    Un espacio uno a uno de composición que me entusiasma enormemente — el lugar más gratificante,
+                    pseudo-mágico y de un impacto único en la sensibilidad y la comunicación afectiva con otrxs. La
+                    canción continúa siendo misteriosa; un arte que se cultiva con paciencia, exploración y práctica.
+                </p>
+                <p class="clase-desc">
+                    Planteo <strong>ejercicios creativos que interrelacionan poética y música</strong> como dos ejes
+                    estrechamente vinculados. Usaremos contenidos de armonía funcional, desarrollo melódico, extractos
+                    de poesía y recursos poéticos para producir en cantidad e ir desarrollando una selección más
+                    minuciosa.
+                </p>
+                <p class="clase-desc">
+                    Cuento con herramientas de <strong>home-studio y DAWs</strong> para facilitar grabaciones de
+                    bocetos, demos y — si se animan — sugerencias de arreglos de producción para acercar la canción a
+                    instancias de difusión. Solo se necesita curiosidad y entusiasmo por el formato canción.
+                </p>
+                <div class="clase-footer">
+                    <span class="clase-footer-label">Consultas →</span>
+                    <span class="clase-footer-val"><a href="mailto:camilalopez85@gmail.com"
+                            style="color:var(--white);text-decoration:none;border-bottom:1px solid rgba(255,255,255,.2)">camilalopez85@gmail.com</a></span>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ESTUDIO -->
+    <div class="section-header">
+        <h2>El Estudio</h2>
+    </div>
+
+    <section class="estudio-section" style="padding-top: 2.5rem;">
+        <div class="estudio-grid">
+            <div class="estudio-foto">
+                <img src="img/estudio1.jpg" alt="Guitarras en el estudio">
+            </div>
+            <div class="estudio-foto">
+                <img src="img/estudio2.jpg" alt="Piano y ventana">
+            </div>
+            <div class="estudio-foto-vert">
+                <img src="img/estudio5.jpg" alt="Micrófono de condensador">
+            </div>
+            <div class="estudio-foto">
+                <img src="img/estudio3.jpg" alt="Korg en el estudio">
+            </div>
+            <div class="estudio-foto">
+                <img src="img/estudio4.jpg" alt="Setup de grabación">
+            </div>
+        </div>
+    </section>
+
     <!-- CONTACTO -->
     <div class="section-header" id="contacto">
         <h2>Contacto</h2>
     </div>
 
     <section class="contacto">
-        <span class="section-label-lg">Contrataciones · Prensa · Colaboraciones</span>
+        <span class="section-label-lg">Contrataciones · Prensa · Colaboraciones · Clases</span>
         <div class="contact-items">
             <div class="contact-item">
                 <div class="contact-label">E-mail</div>
